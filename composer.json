@@ -1,0 +1,25 @@
+{
+    "name": "mralgorithm/laravel-js-lang",
+    "description": "laravel localization for javascript",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mralgorithm\\JsLang\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MohammadReza Aghajani",
+            "email": "mralgorithm.2000@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers":[
+                "Mralgorithm\\JsLang\\JsLangServiceProvider"
+            ]
+        }
+    }
+}
