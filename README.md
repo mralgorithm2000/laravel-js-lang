@@ -74,5 +74,6 @@ return true if Locale equal to Locale parameter and false in otherwise
 ## 1. `JsLang:update`;
 this command convert your `Lang` directory to `JSON` files so JavaScript can use them
 
-** run this command whenever you make a change in your `Lang' directory **
+**run this command whenever you make a change in your `Lang` directory**
+
 `php artisan JsLang:update`
