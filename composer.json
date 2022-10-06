@@ -18,7 +18,7 @@
     "extra": {
         "laravel": {
             "providers":[
-                "Mralgorithm\\JsLang\\JsLangServiceProvider"
+                "Mralgorithm\\JsLang\\laravelJsLangServiceProvider"
             ]
         }
     }
