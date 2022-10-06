@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Mralgorithm\\JsLang\\": "src/"
+            "Mralgorithm\\LaravelJsLang\\": "src/"
         }
     },
     "authors": [
