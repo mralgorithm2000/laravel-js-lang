@@ -10,7 +10,7 @@ to install this package run:
 
 then run this command to publish required files:
 
-`php artisan vendor:publish`
+`php artisan vendor:publish --tag=laravel-js-lang`
 
 to create json files from your `lang` directory run this command:
 
