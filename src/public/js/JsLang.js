@@ -1,12 +1,13 @@
 var translations = [];
 var string_translations = [];
 var global_lang = '';
+var global_url = '';
 function load_translition(location){
     if(translations[location]){
         return true;
     }
     var request = new XMLHttpRequest();
-    request.open("GET", "laravel-js-lang/lang/"+ location +"/js_lang_files.json",false);
+    request.open("GET", global_url + "/laravel-js-lang/lang/"+ location +"/js_lang_files.json",false);
     request.send(null);
     if(request.statusText != 'OK'){
         return false;
@@ -17,7 +18,7 @@ function load_translition(location){
         json_object.forEach(file => {
             var request = new XMLHttpRequest();
 
-            request.open("GET", "laravel-js-lang/lang/"+ location +"/" + file,false);
+            request.open("GET",global_url + "/laravel-js-lang/lang/"+ location +"/" + file,false);
 
             request.send(null);
             if(request.statusText != 'OK'){
@@ -66,6 +67,9 @@ function set_global_lang(locale = ''){
     }else if(locale != ''){
         global_lang = locale;
     }
+}
+function get_url(){
+    global_url = document.getElementById("laravel_js_lang_helper").getAttribute('public-url');
 }
 function translate_from_string(key,replace = ''){
     if(string_translations[global_lang] === undefined){
@@ -118,3 +122,6 @@ function is_locale(locale){
         return false;
     }
 }
+(function(){
+    get_url();
+})();
