@@ -5,21 +5,21 @@ use laravel `__()` function in javascript with same syntax
 
 # installation
 to install this package run:
-
-`composer require mralgorithm/laravel-js-lang`
-
+```
+composer require mralgorithm/laravel-js-lang
+```
 then run this command to publish required files:
-
-`php artisan vendor:publish --tag=laravel-js-lang`
-
+```
+php artisan vendor:publish --tag=laravel-js-lang
+```
 to create json files from your `lang` directory run this command:
-
-`php artisan JsLang:update`
-
+```
+php artisan JsLang:update
+```
 for the last step, add this script to your template file eather to use `JS` functions
-
-`<script id="laravel_js_lang_helper" lang="{{ App::getLocale() }}" src="{{ url('/laravel-js-lang/js/JsLang.js') }}"></script>`
-
+```
+<script id="laravel_js_lang_helper" public-url="{{ url('/') }}" lang="{{ App::getLocale() }}" src="{{ url('/laravel-js-lang/js/JsLang.js') }}"><script>
+```
 # functions
 ## 1. `__()`:
 function __(key,replace = '',locale = ''){}
